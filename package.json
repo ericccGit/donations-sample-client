@@ -1,0 +1,63 @@
+{
+  "name": "donations-sample-client",
+  "version": "1.0.0",
+  "description": "Sample Next.JS / React client application ",
+  "main": "index.js",
+  "dependencies": {
+    "@apollo/client": "^3.3.20",
+    "@types/styled-components": "^5.1.10",
+    "babel-plugin-styled-components": "^1.12.0",
+    "final-form": "^4.20.2",
+    "graphql": "^15.5.0",
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.3",
+    "react-toastify": "^7.0.4",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.9",
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest "
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "author": "Eric Cromien",
+  "license": "ISC"
+}
