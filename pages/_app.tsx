@@ -4,9 +4,10 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { defaultTheme } from "../theme/theme";
 import { ToastContainer } from "react-toastify";
+import { IDonationsClientTheme } from "../theme/theme";
 import "react-toastify/dist/ReactToastify.css";
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle<{ theme: IDonationsClientTheme }>`
   html, body {
     font-family: Helvetica, sans-serif;
     background-color: ${(props) => props.theme.PAGE_BG};

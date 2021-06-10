@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ButtonPrimary = styled.button`
   display: inline-flex;
@@ -17,11 +17,11 @@ export const ButtonPrimary = styled.button`
   color: ${(props) => props.theme.BUTTON_PRIMARY_TEXT};
   background-color: ${(props) => props.theme.BUTTON_PRIMARY};
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
-  
-  ${(p : { disabled : boolean }) =>
+
+  ${(p: { disabled: boolean }) =>
     p.disabled &&
     css`
       opacity: 0.5;
